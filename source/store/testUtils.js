@@ -2,7 +2,7 @@ export const getMockState={
       withNoNotes:()=>({
           byId:{},
           ids:[],
-          openNoteId:""
+          openNoteId:null
       }),
       withOneNote:()=>({
           byId:{
@@ -13,6 +13,17 @@ export const getMockState={
               }
           },
           ids:["id-123"],
-          openNoteId:null
+          openNoteId:"id-123"
+      }),
+      withNoOpenNotes:()=>({
+          byId:{
+          "id-123":{
+              id:"id-123",
+              content:"Hi",
+              timeStamp:1
+          }
+          },
+          ids:["id-123"],
+          openNoteId: null
       })
 }
