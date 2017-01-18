@@ -1,3 +1,4 @@
+import {combineReducers } from 'redux';
 import {merge, dissoc,append,without} from 'ramda';
 
 export const byId = (state={}, action) =>{
@@ -37,3 +38,9 @@ export const openNoteId = (state="",action) =>{
               return state;
         }
 }
+
+export default combineReducers({
+    byId,
+    ids,
+    openNoteId
+})

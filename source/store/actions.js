@@ -1,6 +1,6 @@
-import {V4Options} from "uuid";
+import uuidV1 from "uuid/v1";
 
-export const addNote= (content="",id=V4Options(), timeStamp= Date.now())=>{
+export const addNote= (content="",id=uuidV1(), timeStamp= Date.now())=>{
     return {
         type:"app/addNote",
         payload:{
